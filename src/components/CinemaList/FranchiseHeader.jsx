@@ -10,7 +10,18 @@ const FranchiseHeader = () => {
   const franchise = franchises[franchiseId];
 
   return (
-    <ListSubheader sx={{ pb: 2 }}>
+    <ListSubheader
+      component="div"
+      sx={{
+        pb: 2,
+        backgroundColor: 'background.paper',
+        zIndex: 1300,
+        position: 'sticky',
+        top: 0,
+        borderBottom: '1px solid',
+        borderColor: 'divider'
+      }}
+    >
       <Stack direction="row" justifyContent="space-between">
         <IconButton component={RouterLink} to="/">
           <MdOutlineArrowBack />

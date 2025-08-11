@@ -6,7 +6,7 @@ const dispatchMapSnapTo = (lat, lng) => {
   // This will dispatch the `map.snapTo` event which will trigger a listener on the
   // respective active map component to zoom to the latitude and longitude passed
   console.log('triggering `map.snapTo` event with args: ', `lat: ${lat}, lng: ${lng}`)
-  dispatchEvent(new CustomEvent('map.snapTo', { detail: { lat, lng } }))
+  window.dispatchEvent(new CustomEvent('map.snapTo', { detail: { lat, lng }, bubbles: true }));
 }
 
 const CinemaListItem = ({ name, lat, lng, phoneNumber, distance, ...otherProps }) => {

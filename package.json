@@ -16,6 +16,7 @@
     "d3-format": "^3.1.0",
     "leaflet": "^1.9.3",
     "lodash": "^4.17.21",
+    "mapbox-gl": "^3.14.0",
     "maplibre-gl": "^2.4.0",
     "notistack": "^2.0.8",
     "react": "^18.2.0",
@@ -25,7 +26,7 @@
     "react-leaflet": "^4.2.0",
     "react-map-gl": "^7.0.21",
     "react-router-dom": "^5.3.4",
-    "react-scripts": "2.0.3",
+    "react-scripts": "^5.0.1",
     "use-persisted-state": "^0.3.3"
   },
   "scripts": {
@@ -37,10 +38,17 @@
     "analyse": "cra-bundle-analyzer"
   },
   "eslintConfig": {
-    "extends": ["react-app", "react-app/jest"]
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
   },
   "browserslist": {
-    "production": [">0.2%", "not dead", "not op_mini all"],
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
     "development": [
       "last 1 chrome version",
       "last 1 firefox version",

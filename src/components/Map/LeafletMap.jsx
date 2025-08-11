@@ -51,19 +51,18 @@ const LeafletMap = ({ children }) => {
     <>
       <MapContainer
         bounds={convertBounds(totalBounds)}
+        maxBounds={convertBounds(totalBounds)}
         style={{ height: "100%", backgroundColor: "#99b3cc" }}
         zoomSnap={0.5}
         zoomDelta={0.5}
       >
         <MapSnappingEventListener />
-        <TileLayer
-          attribution='Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-          url="https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}{r}.{ext}"
-          subdomains="abcd"
-          minZoom={0}
-          maxZoom={18}
-          ext="png"
-        />
+          <TileLayer
+              attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+              subdomains={['a', 'b', 'c']}
+              maxZoom={19}
+          />
         <MapContext.Provider value={{ Marker: LeafletMarker }}>
           {children}
         </MapContext.Provider>
